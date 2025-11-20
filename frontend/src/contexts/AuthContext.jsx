@@ -85,7 +85,7 @@ export const AuthProvider = ({ children }) => {
 			const data = await res.json();
 
 			if (!res.ok) {
-				return data.error || "Invalid username or password.";
+				return data.error || "Invalid credentials";
 			}
 
 			localStorage.setItem("token", data.token);
